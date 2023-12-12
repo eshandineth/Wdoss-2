@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lavender Horizon Resort</title>
+<link rel="stylesheet" href="../css/general.css">
+<script src="../JS/script.js" defer></script>
+
+</head>
+<body>
+
+<!--header-->
+
+<header>
+    <a href="../html/home.html"> <img alt="logo" class="logo" src="../images/hotellavender.jpg"></a>
+
+    <h1>Lavender Horizon Resort</h1>
+
+</header>
+
+<!--navigation links-->
+
+<nav>
+  <div class="nav-links" id="navLinks">
+    <img alt="nav" src="../images/cross.png" class="fa" onclick="hideMenu()">
+    <ul class="navbar">
+      <li><a href="../html/home.html">Home</a></li>
+      <li><a href="../html/branches.html">Branches</a></li>
+      <li><a href="../html/adventures.html">Adventures</a></li>
+      <li><a href="../html/restaurants.html">Restaurants</a></li>
+      <li><a href="../html/conference.html">Conferences</a></li>
+      <li><a href="../html/Weddings.html">Weddings</a></li>
+      <li><a href="../html/booking.html">Booking</a></li>
+    </ul>
+  </div>
+  <img alt="nav2" src="../images/menuBar.png" class="fa" onclick="showMenu()">
+</nav>
+
+<!--Rooms booking form-->
+    
+<div class="container">
+  <div class="image">
+      <img src="../images/Singleroom.jpg" alt="Hotel Image"><br><br><br>
+      <img src="../images/Doubleroom.jpg" alt="Hotel Image"><br><br><br>
+      <img src="../images/Tripleroom.jpg" alt="Hotel Image"><br><br><br>
+      <img src="../images/Poolview.jpg" alt="Hotel Image">
+  </div>
+
+  <div class="form">
+      <h2>Rooms Booking Form</h2>
+  
+      <form id="bookingForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+  
+        <label for="check-in">Check-in Date:</label>
+        <input type="date" id="check-in" name="check-in" required>
+  
+        <label for="check-out">Check-out Date:</label>
+        <input type="date" id="check-out" name="check-out" required>
+  
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+  
+        <label for="room-type">Choice of room:</label><br>
+        <label for="single-room">Single Room 
+          <input type="radio" id="single" name="room-type" value="single" data-price="25000" ></label>
+        <label for="double-room">Double Room 
+          <input type="radio" id="double" name="room-type" value="double" data-price="35000"></label>
+        <label for="triple-room">Triple Room 
+          <input type="radio" id="triple" name="room-type" value="triple" data-price="40000"></label><br>
+  
+        <label for="num-rooms">Number of Rooms:</label>
+        <input type="number" id="num-rooms" name="num-rooms" required>
+  
+        <label for="num-adults">Number of Adults:</label>
+        <input type="number" id="num-adults" name="num-adults" required>
+
+    <label for="num-children">Number of Children:</label>
+    <input type="number" id="num-children" name="num-children">
+
+    <label for="duration">Duration of Stay (in days):</label>
+    <input type="number" id="duration" name="duration" required>
+
+    <label>Extra Requirements:</label>
+    <p>
+      <input type="checkbox" id="wifi" name="wifi">
+      <label for="wifi">WiFi</label><br>
+
+      <input type="checkbox" id="extra-bed" name="extra-bed">
+      <label for="extra-bed">Extra Bed (Rs.8000)</label><br>
+
+      <input type="checkbox" id="pool-view" name="pool-view">
+      <label for="pool-view">Pool View</label><br>
+
+      <input type="checkbox" id="garden-view" name="garden-view">
+      <label for="garden-view">Garden View</label><br>
+    </p>
+    
+  <label for="promoCode">Enter Promo Code:</label>
+  <input type="text" id="promoCode" name="promoCode">
+
+  
+   
+    
+    <!-- Display booking information -->
+    <h3>Current booking </h3>
+    <p id="bookingInfo"></p>
+
+    <!-- Display total cost -->
+    <h3>Current booking Cost</h3>
+    <p id="totalCost"></p>
+
+     <!--Display loyalty points-->
+     <h3>Loyalty points</h3>
+     <p id="loyaltypoints"></p>
+
+    <!-- Display overall cost of booking -->
+    <h3>Overall Cost of Bookings</h3>
+    <p id="overallCostOfBooking"></p>
+
+    <!-- Display overall booking -->
+    <h3>Overall Booking</h3>
+    <p id="overallBooking"></p>
+
+    
+
+    
+   
+
+     <!-- Submit button -->
+     <button type="button" id="submitBtn">Book Now</button><br> 
+     <button type="button" id="loyaltyBtn">Check loyalty points</button><br> 
+     <button type="button" id="addToFavourite">Add to favourite</button>
+  </form>
+</div>
+</div>
+
+
+
+
+<!--Adventure form-->
+
+<div class="container">
+    <div class="image">
+        <img src="../images/diving4.jpg" alt="Adventure Image"><br><br>
+        <img src="../images/diving3.jpg" alt="Adventure Image"><br><br>
+        <img src="../images/diving2.jpg" alt="Adventure Image">
+    </div>
+    <div class="form">
+        <h2>Adventure Form (Diving)</h2>
+        <form id="adventureBookingForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+  
+          <label for="phoneNumber">Phone Number:</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="[0-9]{10}">
+  
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required>
+  
+          <label for="mail">Mail:</label>
+          <input type="email" id="mail" name="mail" required>
+  
+          <h3>LOCAL</h3>
+          <label for="localAdults">Adults:</label>
+          <input type="number" id="localAdults" name="localAdults" min="0" value="0">
+  
+          <label for="localKids">Kids:</label>
+          <input type="number" id="localKids" name="localKids" min="0" value="0">
+  
+          <h3>FOREIGN</h3>
+          <label for="foreignAdults">Adults:</label>
+          <input type="number" id="foreignAdults" name="foreignAdults" min="0" value="0">
+  
+          <label for="foreignKids">Kids:</label>
+          <input type="number" id="foreignKids" name="foreignKids" min="0" value="0">
+  
+          <h3>GUIDES</h3>
+          <label for="extraChargeAdult">Guide for an Adult – 1000LKR extra will be charged:
+          <input type="checkbox" id="extraChargeAdult" name="extraChargeAdult"></label>
+  
+          <label for="extraChargeKids">Guide for a Kid – 500LKR extra will be charged:
+          <input type="checkbox" id="extraChargeKids" name="extraChargeKids"></label>
+  
+          <button type="button" onclick="calculateAdventureCost()">Book Now</button><br>
+          <button type="button" onclick="thankyouMessage()">Book Adventure</button><br>
+          <button type="button" id="add-to-favorites-btn" class="favorites-btn">Add to Favorites</button><br><br>
+          <h2 id="adventureConfirmationMessage"></h2>
+          <h3 id="currentAdventureBookingInfo"></h3>
+          <h3 id="overallAdventureBookingInfo"></h3>
+
+      </form>
+
+  <!-- Output Area for Adventure Booking -->
+  <div id="adventure-booking-output" class="output-section"></div>
+
+  
+  <!-- Favorites Section -->
+  <div class="favorites-section">
+    
+  </div>
+</div>
+</div>
+  
+
+
+<!--footer-->  
+
+<footer class="footer-distributed">
+
+  <div class="footer-left">
+      <h3><span>Lavender</span> Horizon Resort</h3>
+
+      <p class="footer-links">
+        <a href="../html/home.html">Home</a>
+        |
+        <a href="../html/branches.html">Branches</a>
+        |
+        <a href="../html/adventures.html">Adventures</a>
+        |
+        <a href="../html/restaurants.html">Restaurants</a>
+        |
+        <a href="../html/conference.html">Conferences</a>
+        |
+        <a href="../html/Weddings.html">Weddings</a>
+        |
+        <a href="../html/booking.html">Booking</a>
+    </p>
+      <p class="footer-hotel-name">Copyright © 2023 <strong>Lavender Hotels</strong> All rights reserved</p>
+  </div>
+
+  <div class="footer-center">
+      <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Kinniya</span>
+              Trincomalee</p>
+      </div>
+
+      <div>
+          <i class="fa fa-phone"></i>
+          <p>+94 773531775</p>
+      </div>
+      <div>
+          <i class="fa fa-envelope"></i>
+          <p>lavenderhotels@gmail.com</p>
+      </div>
+  </div>
+  <div class="footer-right">
+      <p class="footer-hotel-about">
+          <span>About the hotel</span>
+          <strong>Lavender Horizon Resort</strong> our escape to serenity. 
+          Immerse in luxury, nature, and relaxation at our idyllic resort. 
+          Discover the essence of tranquility and create unforgettable memories.
+      </p>
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/Lavenderhotels/"><img src="../images/fb.png" alt="fb" class="social_icon"></a>
+        <a href="https://www.instagram.com/lavenderhotels/?hl=en"><img src="../images/inster.png" alt="inster" class="social_icon"></a>
+        <a href="https://au.linkedin.com/company/hotel-lavender?trk=public_profile_experience-item_profile-section-card_image-click"><img src="../images/linkedin.png" alt="linked in" class="social_icon"></a>
+        <a href="https://twitter.com/_lavenderhotels?lang=en"><img src="../images/twitter.png" alt="twitter" class="social_icon"></a>
+        <a href="https://www.youtube.com/watch?v=8trhKjh8NHk&ab_channel=JourneywithBenny"><img src="../images/youtube.png" alt="youtube" class="social_icon"></a>
+    </div>
+  </div>
+</footer>
+
+<!--Java for the nav-->
+
+<script>
+
+
+  var navLinks = document.getElementById("navLinks");
+  function showMenu() {
+    navLinks.style.right = "0";
+  }
+
+  function hideMenu() {
+    navLinks.style.right="-200px";
+  }
+  
+</script>
+
+</body>
+</html>
+
+<!---------------------------------------------------References------------------------------------------------------------------------->
+
+<!--adventure form image - https://www.epicsrilankaholidays.com/things-to-do/trincomalee/pigeon-island.html------>
+<!--rooms booking form image - https://hoteldesigns.net/industry-news/in-pictures-inside-bvlgari-hotel-paris/---->
+
+
